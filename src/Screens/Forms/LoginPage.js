@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { TextField, Button, Typography, Container, Grid } from '@mui/material';
+import { TextField, Button, Typography, Container, Grid, Box } from '@mui/material';
 import LandingpageImage from '../../Images/LandingpageImage.png'; 
 
 const LoginPage = () => {
@@ -31,8 +31,8 @@ const LoginPage = () => {
         </Grid>
         <Grid item xs={12} md={6} style={{ display: 'flex', alignItems: 'center' }}>
           <div>
-            <Typography variant="h4" align="center" gutterBottom>
-              Login
+            <Typography variant="h4" align="center" gutterBottom >
+                <Box sx={{ fontWeight: 'bold', m: 1 }}>Login</Box>
             </Typography>
             <form onSubmit={handleSubmit}>
               <Grid container spacing={2} justifyContent="center">
@@ -58,7 +58,7 @@ const LoginPage = () => {
                     required
                   />
                 </Grid>
-                <Grid item xs={12}> {/* Changed Grid item to take full width */}
+                <Grid item xs={4}> {/* Changed Grid item to take full width */}
                   <Button variant="contained" color="primary" type="submit" fullWidth>
                     Login
                   </Button>
@@ -66,7 +66,7 @@ const LoginPage = () => {
               </Grid>
             </form>
           
-            <p align="left"> Don't have an account? &nbsp;
+            <p> Don't have an account? &nbsp;
  <Link to="/">Sign up</Link></p>
           </div>
         </Grid>
